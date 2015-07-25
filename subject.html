@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="">
+</head>
+
+
+<body>
+  <h1>Score Sheet</h1>
+  <script type="text/javascript">
+var candidateName = [];
+var candidates = 0;
+var moreCandidates = "y";
+
+ while (moreCandidates == "y"){
+    candidateName.push(prompt("Enter candidate name"));
+   var noOfSubjects = prompt("How many subjects are you offering?");
+      for(i = 1; i <= noOfSubjects; i++){
+        var subName = [];
+        var scores = [];
+        var unit = [];
+        subName.push(prompt("What is the subject name?"));
+        console.log(subName);
+        scores.push(prompt("Enter your subject score"));
+        console.log(scores);
+        unit.push(prompt("Enter your subject unit"));
+         console.log(unit);
+      }
+    moreCandidates = prompt("Do you want to add more candidates? y/n");
+    candidates++
+ }
+  document.write("Number of candidates is" + " " + candidates);
+    document.write("<br/>");
+ document.write(candidateName);
+    document.write("<br/>");
+ document.write(noOfSubjects);
+    document.write("<br/>");
+ document.write(subName);
+     document.write("<br/>");
+ //document.write(scores);
+   //  document.write("<br/>");
+ //document.write(unit);
+
+ 
+  </script>
