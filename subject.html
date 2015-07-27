@@ -8,38 +8,48 @@
 <body>
   <h1>Score Sheet</h1>
   <script type="text/javascript">
-var candidateName = [];
-var candidates = 0;
+var candidateName;
+var noOfCandidates = 0;
 var moreCandidates = "y";
-var subName = [];
-var scores = [];
-var unit = [];
+var subj;
+var scores;
+var unit;
 
  while (moreCandidates == "y"){
-    candidateName.push(prompt("Enter candidate name"));
+    candidateName=prompt("Enter candidate name");
+    var candidates =[candidateName];
    var noOfSubjects = prompt("How many subjects are you offering?");
       for(i = 1; i <= noOfSubjects; i++){
-        subName.push(prompt("What is the subject name?"));
-        console.log(subName);
-        scores.push(prompt("Enter your subject score"));
-        console.log(scores);
-        unit.push(prompt("Enter your subject unit"));
-         console.log(unit);
+        subj=prompt("What is the subject name?");
+        var subject = [subj];
+        for(j=0; j<subject.length; j++){
+          document.write(subject.join(',') + '<br/>');
+        }
+        scores=prompt("Enter your subject score");
+        var result = [scores];
+        for(k=0; k<result.length; k++){
+          document.write(result.join(',') + '<br/>');
+        }
+        unit=prompt("Enter your subject unit");
+        var credit = [unit];
+        for(l=0; l<unit.length; l++){
+          document.write(unit.join(',') + '<br/>');
+        }
+
       }
     moreCandidates = prompt("Do you want to add more candidates? y/n");
-    candidates++
+    noOfCandidates++
  }
-   document.write("Number of candidates is" + " " + candidates);
-     document.write("<br/>");
-  document.write(candidateName);
-     document.write("<br/>");
-  document.write(noOfSubjects + " " + "subjects");
-     document.write("<br/>");
-  document.write(subName.join(","));
-      document.write("<br/>");
- document.write(scores.join(","));
-     document.write("<br/>");
- document.write(unit.join(","));
-
+//    document.write("Number of candidates is" + " " + noOfCandidates + "<br/>");
+//   document.write(candidates + "<br/>");
+//   console.log(candidates);
+//   document.write(noOfSubjects + " " + "subjects" + "<br/>");
+//   console.log(noOfSubjects);
+//   document.write(subject + "<br/>");
+//   console.log(subject);
+//  document.write(result + "<br/>");
+//  console.log(result );
+//  document.write(credit + "<br/>");
+// console.log(credit);
  
   </script>
